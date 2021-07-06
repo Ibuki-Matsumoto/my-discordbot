@@ -20,8 +20,6 @@ import asyncio
 
 client = commands.Bot(case_insensitive=True, command_prefix="/", help_command=None)
 ModeFlag = 0
-# giphy_token = 'ZRGiPa4b9SXwskqMCVxDCDXh3mrMFDLG'
-# api_instance = giphy_client.DefaultApi()
 TEXT_CHANNEL = 764217463210508290
 token = os.environ['DISCORD_BOT_TOKEN']
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
@@ -31,8 +29,6 @@ jsonf = 'discord-spreadsheet-293417-2ba5cc544223.json'
 credentials = ServiceAccountCredentials.from_json_keyfile_name(jsonf, scope)
 
 gc = gspread.authorize(credentials)
-
-SPREADSHEET_KEY = "172XF6qN0JFYmrcJkF9Eb99YBnCHHchpM3Zpg1jVarxo"
 
 worksheet = gc.open_by_key(SPREADSHEET_KEY).sheet1
 
